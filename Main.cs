@@ -21,7 +21,7 @@ namespace RedScrapCauldron
 		public const string PluginName = "Red Scrap for Cauldrons";
 
 		// Token: 0x04000004 RID: 4
-		public const string PluginVersion = "1.0.6";
+		public const string PluginVersion = "1.0.7";
 
 		private static string RedColor = "E7543A";
 		private static string GreenColor = "77FF17";
@@ -79,7 +79,7 @@ namespace RedScrapCauldron
 		private void PurchaseInteraction_OnInteractionBegin(On.RoR2.PurchaseInteraction.orig_OnInteractionBegin methodReference, PurchaseInteraction thisReference, Interactor interactor)
 		{
 			// handle 3 white => 1 green
-			if (thisReference.costType == CostTypeIndex.WhiteItem && thisReference.cost == 3 && this.CheckIfInteractorHasItem(interactor, RoR2Content.Items.ScrapGreen))
+			if (thisReference.costType == CostTypeIndex.WhiteItem && thisReference.cost == 3 && (CheckIfInteractorHasItem(interactor, RoR2Content.Items.ScrapGreen) || CheckIfInteractorHasItem(interactor, DLC1Content.Items.RegeneratingScrap)))
 			{
 				SetPriceTo(thisReference, CostTypeIndex.GreenItem, 1);
 				methodReference.Invoke(thisReference, interactor);
