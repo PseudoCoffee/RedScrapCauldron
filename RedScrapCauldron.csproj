@@ -11,6 +11,7 @@
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
 		<PackageReference Include="BepInEx.Core" Version="5.4.21" />
+		<PackageReference Include="Rune580.Mods.RiskOfRain2.RiskOfOptions" Version="2.8.3" />
 		<!--
 			<PackageReference Include="R2API.Items" Version="1.0.*" />
 			<PackageReference Include="R2API.Language" Version="1.0.*" />
