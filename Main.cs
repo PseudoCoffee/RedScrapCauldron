@@ -21,7 +21,7 @@ namespace RedScrapCauldron
 		public const string PluginName = "Red Scrap for Cauldrons";
 
 		// Token: 0x04000004 RID: 4
-		public const string PluginVersion = "1.0.8";
+		public const string PluginVersion = "1.0.9";
 
 		private const string RedColor = "E7543A";
 		private const string GreenColor = "77FF17";
